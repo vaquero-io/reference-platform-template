@@ -1,0 +1,29 @@
+qa:
+
+  cui:
+    vcenter: qa
+    network: qaweb
+    addresses:
+      - 10.21.10.10
+      - 10.21.10.11
+
+  adminui:
+    vcenter: qa
+    network: qaweb
+    addresses:
+      - 10.21.10.20
+      - 10.21.10.21
+
+  api:
+    vcenter: qa
+    network: qasvc
+    addresses:
+      - 10.22.10.10
+      - 10.22.10.11
+
+  db:
+    vcenter: qa
+    network: qadb
+    addresses:
+      - 10.28.10.10
+      - 10.28.10.11

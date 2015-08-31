@@ -1,0 +1,35 @@
+compute:
+
+  default: &default
+    cpu: 1
+    ram: 1024
+    image: 'org-centos-rev00002'
+    disk:
+      mount: 'opt'
+      capacity: 8192
+
+  defaultdb: &defaultdb
+    cpu: 4
+    ram: 8192
+    image: 'org-centos-rev00002'
+    disk:
+      mount: 'opt'
+      capacity: 81920
+
+  tiny:
+    <<: *default
+
+  small:
+    <<: *default
+    ram: 2048
+
+  medium:
+    <<: *default
+    ram: 4096
+
+  smalldb:
+    <<: *defaultdb
+
+  mediumdb:
+    <<: *defaultdb
+    ram: 12288

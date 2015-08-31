@@ -1,0 +1,54 @@
+platform:
+  product: demo
+  provider: vaquero_io_provider_template
+  plugin_version: 2.0.0
+
+  environments:
+    - dev
+    - int
+    - qa
+    - prod
+
+  nodename:
+    - environment
+    - component
+
+  require:
+    - vcenter
+    - network
+    - compute
+
+  profiles:
+
+    defaultwebprofile: &defaultwebprofile
+      vcenter: dev
+      network: devweb
+      compute: tiny
+      count: 2
+      cmserver: chef.domain.com
+      cmrunlist:
+        - org-base
+        - app-#
+      addresses:
+        -
+
+    defaultsvcprofile: &defaultsvcprofile
+      network: devsvc
+
+    defaultdbprofile: &defaultdbprofile
+      network: devdb
+      compute: smalldb
+
+  roles:
+
+    cui:
+      <<: *defaultwebprofile
+
+    adminui:
+      <<: *defaultwebprofile
+
+    api:
+      <<: *defaultsvcprofile
+
+    db:
+      <<: *defaultdbprofile

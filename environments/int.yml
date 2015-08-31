@@ -1,0 +1,25 @@
+int:
+
+  cui:
+    vcenter: int
+    addresses:
+      - 10.1.20.10
+      - 10.1.20.11
+
+  adminui:
+    vcenter: int
+    addresses:
+      - 10.1.20.20
+      - 10.1.20.21
+
+  api:
+    vcenter: int
+    addresses:
+      - 10.2.20.10
+      - 10.2.20.11
+
+  db:
+    vcenter: int
+    addresses:
+      - 10.8.20.10
+      - 10.8.20.11

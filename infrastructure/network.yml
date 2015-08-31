@@ -1,0 +1,46 @@
+network:
+
+  devweb:
+    vlanid: DEV_WEB_NET
+    gateway: 10.1.128.1
+    netmask: 19
+
+  devsvc:
+    vlanid: DEV_SVC_NET
+    gateway: 10.2.128.1
+    netmask: 19
+
+  devdb:
+    vlanid: DEV_DB_NET
+    gateway: 10.8.128.1
+    netmask: 19
+
+  qaweb:
+    vlanid: QA_WEB_NET
+    gateway: 10.21.128.1
+    netmask: 19
+
+  qasvc:
+    vlanid: QA_SVC_NET
+    gateway: 10.22.128.1
+    netmask: 19
+
+  qadb:
+    vlanid: QA_DB_NET
+    gateway: 10.28.128.1
+    netmask: 19
+
+  prodweb:
+    vlanid: PROD_WEB_NET
+    gateway: 10.101.128.1
+    netmask: 19
+
+  prodsvc:
+    vlanid: PROD_SVC_NET
+    gateway: 10.102.128.1
+    netmask: 19
+
+  proddb:
+    vlanid: PROD_DB_NET
+    gateway: 10.108.128.1
+    netmask: 19

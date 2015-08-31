@@ -1,0 +1,54 @@
+prod:
+
+  cui:
+    vcenter: prod
+    network: prodweb
+    compute: medium
+    count: 8
+    addresses:
+      - 10.21.101.10
+      - 10.21.101.11
+      - 10.21.101.12
+      - 10.21.101.13
+      - 10.21.101.14
+      - 10.21.101.15
+      - 10.21.101.16
+      - 10.21.101.17
+
+  adminui:
+    vcenter: prod
+    network: prodweb
+    compute: medium
+    count: 4
+    addresses:
+      - 10.21.101.20
+      - 10.21.101.21
+      - 10.21.101.22
+      - 10.21.101.23
+
+  api:
+    vcenter: prod
+    network: prodsvc
+    compute: medium
+    count: 12
+    addresses:
+      - 10.22.102.10
+      - 10.22.102.11
+      - 10.22.102.12
+      - 10.22.102.13
+      - 10.22.102.14
+      - 10.22.102.15
+      - 10.22.102.16
+      - 10.22.102.17
+      - 10.22.102.18
+      - 10.22.102.19
+      - 10.22.102.20
+      - 10.22.102.21
+
+  db:
+    vcenter: prod
+    network: proddb
+    compute: mediumdb
+    addresses:
+      - 10.28.108.10
+      - 10.28.108.11

@@ -1,0 +1,37 @@
+vcenter:
+
+  defaultnonprod: &defaultnonprod
+    timezone: 085
+    datacenter: 'nonprod.domain.com'
+    imagefolder: 'org/app/templates'
+    destfolder: 'org/app/dev'
+    datastore: 'org-nonprod'
+    domain: dev.domain.com
+    dnsips:
+      - 10.1.1.15
+      - 10.1.1.16
+
+  defaultprod: &defaultprod
+    <<: *defaultnonprod
+    datacenter: 'prod.domain.com'
+    destfolder: 'org/app/undefined'
+    datastore: 'org-prod'
+    domain: domain.com
+    dnsips:
+      - 10.200.1.15
+      - 10.200.1.16
+
+  dev:
+    <<: *defaultnonprod
+
+  int:
+    <<: *defaultnonprod
+    destfolder: 'org/app/int'
+
+  qa:
+    <<: *defaultnonprod
+    destfolder: 'org/app/qa'
+
+  prod:
+    <<: *defaultprod
+    destfolder: 'org/app/prod'
