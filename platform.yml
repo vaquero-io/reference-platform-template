@@ -13,7 +13,7 @@ platform:
     - environment
     - component
 
-  require:
+  infrastructure:
     - vcenter
     - network
     - compute
