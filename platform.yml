@@ -33,9 +33,11 @@ platform:
         -
 
     defaultsvcprofile: &defaultsvcprofile
+      <<: *defaultwebprofile
       network: devsvc
 
     defaultdbprofile: &defaultdbprofile
+      <<: *defaultwebprofile
       network: devdb
       compute: smalldb
 
